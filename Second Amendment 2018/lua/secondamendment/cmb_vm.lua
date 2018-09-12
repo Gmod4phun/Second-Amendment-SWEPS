@@ -408,7 +408,7 @@ function SWEP:EmitShell()
 		phys:AddAngleVelocity(VectorRand()*400)
 
 		SafeRemoveEntityDelayed(shell, 5)
-	elseif SP and SERVER then
+	elseif game.SinglePlayer() and SERVER then
 		SendUserMessage("CMB_EMITSHELL", self.Owner)
 	end
 end
